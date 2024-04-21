@@ -39,7 +39,7 @@ installed and Visual Studio Code.
 
 ### Programs needed to Getting started
 
-- [NodeJS](https://nodejs.org/en/)
+- [NodeJS version => 20.12.2](https://nodejs.org/en/)
 - [Visual Studio Code - Vscode](https://code.visualstudio.com/)
 
 Clone the project and access the folder
