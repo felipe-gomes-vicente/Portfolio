@@ -1,8 +1,9 @@
 "use client" // this is a client component
 import React from "react"
 import { useState } from "react"
+import { Link } from "react-scroll/modules"
 
-import Link from "next/link"
+// import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
@@ -10,21 +11,21 @@ import { IoMdMenu, IoMdClose } from "react-icons/io"
 
 interface NavItem {
   label: string
-  id?: string
+  page: string
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    id: "#home",
+    page: "home",
   },
   {
     label: "About",
-    id: "#about",
+    page: "about",
   },
   {
     label: "Projects",
-    id: "#projects",
+    page: "projects",
   },
 ]
 
@@ -38,7 +39,7 @@ export default function Navbar() {
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link href="#home">
+            <Link to="home">
               <div className="container flex items-center space-x-2">
                 <h2 className="text-2xl font-bold">Felipe Gomes Vicente</h2>
               </div>
@@ -60,21 +61,22 @@ export default function Navbar() {
               navbar ? "block" : "hidden"
             }`}
           >
-            <div className=" items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               {NAV_ITEMS.map((item, idx) => {
                 return (
-                  <a
+                  <Link
                     key={idx}
-                    className={
-                      pathname == `${item.id}`
-                        ? "font-bold"
-                        : "text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
-                    }
-                    href={item.id}
+                    className={"block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"}
+                    to={item.page}
                     onClick={() => setNavbar(!navbar)}
+                    activeClass="active"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 )
               })}
               {currentTheme === "dark" ? (
