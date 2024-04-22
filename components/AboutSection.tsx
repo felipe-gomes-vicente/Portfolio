@@ -26,7 +26,7 @@ const skills = [
 
 const AboutSection = () => {
   return (
-    
+
     <section id="about">
       <div className="my-12 pb-12 md:pt-16 md:pb-48">
         <h1 className="text-center font-bold text-4xl">
@@ -42,13 +42,13 @@ const AboutSection = () => {
             <p>
               Hi, my name is Felipe and I&#39;m a{" "}
               <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              Frontend Developer in São Paulo, SP.
+              <span className="font-bold">{" self-motivated"}</span> and Frontend Developer starting freelance work in 
+              2021, I&#39;ve been working as a Junior Front-end Developer since 2023. in São Paulo, SP.
             </p>
-            <br />  
+            <br />
             <p>
               I graduated from Uninove University, São Paulo in 2022
-              in Tecnologia em Sistemas para Internet. 
+              in Tecnologia em Sistemas para Internet.
               {/* and have been working in the
               field ever since. */}
             </p>
@@ -63,13 +63,12 @@ const AboutSection = () => {
               <span className="font-bold text-violet-400">
                 never stop growing
               </span>{" "}
-              and that&#39;s what I strive to do, I have a passion for
-              technology and a desire to always push the limits of what is
-              possible. I am excited to see where my career takes me and am
-              always open to new opportunities. 🙂
+              and that&#39;s what I strive to do, I have a passion for technology, I&#39;m always looking to improve my 
+              learning and communication skills, I&#39;m curious and resilient and a desire to always push the limits of what is
+              possible. I am excited to see where my career takes me and am always open to new opportunities. 🙂
             </p>
           </div>
-          
+
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">My Skills</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
