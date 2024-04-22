@@ -19,7 +19,7 @@ const HeroSection = () => {
             makes life easier and more meaningful.
           </p>
           <Link
-            className="text-neutral-100 font-semibold px-6 py-3 bg-violet-600 rounded shadow hover:bg-violet-700"
+            className="text-neutral-100 font-semibold  px-6 py-3 bg-violet-600 rounded shadow hover:bg-violet-700 cursor-pointer"
             to="projects"
             activeClass="active"
             spy={true}
@@ -31,7 +31,7 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="md:mt-2 md:w-1/2">
+        <div className="md:mt-2 sm:mt-5 md:w-1/2">
           <Image
             src="/profile-pic.png"
             alt=""

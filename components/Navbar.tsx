@@ -1,6 +1,6 @@
 "use client" // this is a client component
-import React from "react"
-import { useState } from "react"
+
+import React, { useEffect, useState } from "react"
 import { Link } from "react-scroll/modules"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
@@ -31,7 +31,15 @@ export default function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme()
   const currentTheme = theme === "system" ? systemTheme : theme
   const pathname = usePathname()
-  const [navbar, setNavbar] = useState(false)
+  const [navbar, setNavbar] = useState(false)  
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
     <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-gray-900 dark:border-b dark:border-stone-600">
       <div className="justify-between md:items-center md:flex">
