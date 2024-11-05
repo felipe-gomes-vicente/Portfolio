@@ -11,7 +11,7 @@
 Build a portfolio landing page using NextJS and Tailwind CSS. 
 The application created to display products digital and projects Front-end.
 
-Watch it in action Deploy: [Click Here](https://felipe-gomes-vicente.github.io/portfolio-v1/)
+Watch it in action Deploy: [Click Here](https://felipe-gomes-vicente.netlify.app/)
 
 What was developed:
 
